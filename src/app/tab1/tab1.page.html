@@ -16,11 +16,11 @@
     <ion-col size-lg="11">
       <ion-item>
         <ion-label position="floating">Escriba una nueva tarea:</ion-label>
-        <ion-input [(ngModel)]="task"></ion-input>
+        <ion-input [(ngModel)]="task" (keyup.enter)="addTask()"></ion-input>
       </ion-item>
     </ion-col>
     <ion-col size-lg="1" size-xs="6">
-        <ion-button expand="block" *ngIf="task"  (click)="addTask()"> 
+        <ion-button expand="block" *ngIf="task" (click)="addTask()"> 
           <ion-icon name="add"></ion-icon>
         </ion-button>
     </ion-col>

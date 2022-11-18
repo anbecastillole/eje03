@@ -14,6 +14,7 @@ export class Tab1Page {
     this.tasks= this.taskService.getTasks();
 
   } 
+ 
 
   public addTask(){
 
