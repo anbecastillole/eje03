@@ -30,12 +30,12 @@ export class TasksService {
     return this.tasksComplete;
   }
 
-  public addCompletedTask(taskComplete:string){
-    this.tasksComplete.push(taskComplete);
+  public addCompletedTask(pos: number){
+    this.tasksComplete.push(this.tasks[pos]);
     console.log(this.tasksComplete);
   }
 
-  public removeCompletedTask(pos:number){
+  public removeCompletedTask(pos: number){
     this.tasksComplete.splice(pos,1);
   }
 }

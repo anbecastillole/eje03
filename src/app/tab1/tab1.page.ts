@@ -21,6 +21,7 @@ export class Tab1Page {
     this.taskService.addTask(this.task);
     this.tasks=this.taskService.getTasks();
     console.log(this.tasks);
+    this.task='';
  
   }
 
@@ -31,7 +32,7 @@ export class Tab1Page {
 
   public completeTask(pos:number){
     //se agrega al otro
-    this.taskService.addCompletedTask(this.task);
+    this.taskService.addCompletedTask(pos);
     this.tasks = this.taskService.getTasks();
     //se elimina
     this.taskService.removeTask(pos);
